@@ -1,7 +1,10 @@
 #!/bin/bash
+# This is a Linode StackScript for CentOS Web Panel setup on CentOS 7.
+# The GitHub location: https://github.com/davisdre/Linode-StackScript-Centos-WebPanel
+#
+#
 # This block defines the variables the user of the script needs to input
 # when deploying using this script.
-#
 #
 #<UDF name="hostname" label="The hostname for the new Linode.">
 # HOSTNAME=
