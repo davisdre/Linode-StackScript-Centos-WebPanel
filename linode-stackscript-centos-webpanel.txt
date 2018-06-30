@@ -1,0 +1,55 @@
+#!/bin/bash
+# This block defines the variables the user of the script needs to input
+# when deploying using this script.
+#
+# This script will also install Centos Web Panel.
+# Learn more at http://centos-webpanel.com/installation-instructions
+#
+# CentOS Web Panel Configuration
+
+# Log in to your CWP server using the link provided by the installer on your server
+# CentOS WebPanel Admin GUI at http://SERVER-IP:2030/
+# Username: root
+# Password: your root password
+#
+# – Setup nameservers
+# – Setup shared ip (must be your public IP address)
+# – Setup at least one hosting package (or edit default package)
+# – Setup root email
+# & now you are ready to host domains…
+# 
+# For additional configuration instruction, please check our wiki/documentation site.
+# http://wiki.centos-webpanel.com/
+#
+#
+#<UDF name="hostname" label="The hostname for the new Linode.">
+# HOSTNAME=
+#
+#<UDF name="fqdn" label="The new Linode's Fully Qualified Domain Name">
+# FQDN=
+
+# This sets the variable $IPADDR to the IP address the new Linode receives.
+IPADDR=$(/sbin/ifconfig eth0 | awk '/inet / { print $2 }' | sed 's/addr://')
+
+# This updates the packages on the system from the distribution repositories.
+yum -y update
+
+# This section sets the hostname.
+hostnamectl set-hostname $HOSTNAME
+
+# This section sets the Fully Qualified Domain Name (FQDN) in the hosts file.
+echo $IPADDR $FQDN $HOSTNAME >> /etc/hosts
+
+# Centos Web Panel - Preparing Server
+yum -y install wget
+
+# Centos Web Panel - Server Update
+yum -y update
+
+# Centos Web Panel - Installation
+cd /usr/local/src
+wget http://centos-webpanel.com/cwp-el7-latest
+sh cwp-el7-latest
+
+# Reboot server
+reboot
