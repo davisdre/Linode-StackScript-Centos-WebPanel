@@ -20,16 +20,23 @@ Password:
 MySQL root Password: 
 
 #########################################################
+
           CentOS Web Panel MailServer Installer
+          
 #########################################################
+
 SSL Cert name (hostname): 
+
 SSL Cert file location /etc/pki/tls/ private|certs
+
 #########################################################
 
 visit for help: www.centos-webpanel.com
+
 Write down login details and press ENTER for server reboot!
+
 Press ENTER for server reboot!
-__________________________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________________
 Learn more about Linode StackScript here: https://www.linode.com/stackscripts 
 
 Learn more about CentOS Web Panel here: http://centos-webpanel.com
