@@ -1,5 +1,5 @@
 # Linode-StackScript-Centos-WebPanel
-This is the Linode StackScript to install CentOS Web Panel on Centos7. This process can take up to 15 minutes to completed depending on VPS speeds. A good way to follow along the install, open up the "Lish via Browser". When you see the following text, reboot the VPS:
+This is the Linode StackScript to install CentOS Web Panel on Centos7. This process can take up to 15 minutes to complete depending on VPS speeds. A good way to follow along the install, open up the "Lish via Browser". When you see the following text, reboot the VPS:
 __________________________________________________________________________________________________________________________________________
 #############################
 #      CWP Installed        #
