@@ -30,6 +30,11 @@ yum -y install wget
 # Centos Web Panel - Server Update
 yum -y update
 
+# Centos Web Panel - MARIA-DB 10-latest
+cd /usr/local/src
+wget http://centos-webpanel.com/cwp-latest
+sh cwp-latest
+
 # Centos Web Panel - Installation
 cd /usr/local/src
 wget http://centos-webpanel.com/cwp-el7-latest
